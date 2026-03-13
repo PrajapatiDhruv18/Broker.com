@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>house equipment</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+}
+
+/* Header Title */
+.header {
+    padding: 20px 40px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Property Images Section */
+.property-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.big-image {
+    width: 65%;
+    height: 350px;
+    background: #ddd;
+    border-radius: 8px;
+}
+
+.side-images {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side-img {
+    height: 110px;
+    background: #ccc;
+    border-radius: 6px;
+}
+
+/* Info Cards Below Image */
+.info-strip {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.info-box {
+    text-align: center;
+}
+
+/* Page Tabs */
+.tabs {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab {
+    padding-bottom: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.active {
+    border-bottom: 3px solid purple;
+}
+
+/* Layout Sections */
+.main-area {
+    display: flex;
+    margin-top: 25px;
+    gap: 25px;
+}
+
+/* Left section */
+.left-box {
+    width: 65%;
+}
+
+.feature-box {
+    padding: 20px;
+    background: #e8fff1;
+    border: 1px solid #b5ffd6;
+    border-radius: 8px;
+}
+
+/* Right sidebar */
+.right-box {
+    width: 30%;
+}
+
+.sidebar-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 9px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    background: purple;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.map-box {
+    background: white;
+    padding: 18px;
+    margin-top: 25px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.location-map {
+    height: 250px;
+    background: #ddd;
+    border-radius: 8px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h2>Property Title Here</h2>
+    <p>Developer Name • City, Location</p>
+</div>
+
+<div class="container">
+
+    <!-- Images section -->
+    <div class="property-section">
+        <div class="big-image"><img src="ac front.webp" alt="" height="350px"width="812px"></div>
+
+        <div class="side-images">
+            <div class="side-img"><img src="ac front.webp" alt="" height="110px"width="375px"></div>
+            <div class="side-img"><img src="ac left side.webp" alt="" height="110px"width="375px"></div>
+            <div class="side-img"><img src="ac right side.jpg" alt="" height="110px"width="375px"></div>
+        </div>
+    </div>
+
+    <!-- Info Strip -->
+    <div class="info-strip">
+        <div class="info-box">Configurations</div>
+        <div class="info-box">Possession Date</div>
+        <div class="info-box">Pricing</div>
+        <div class="info-box">Carpet Area</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active">Overview</div>
+        <div class="tab">Highlights</div>
+        <div class="tab">Location</div>
+        <div class="tab">About Project</div>
+        <div class="tab">Floor Plan</div>
+        <div class="tab">Tour</div>
+    </div>
+
+    <div class="main-area">
+
+        <!-- Left Content -->
+        <div class="left-box">
+            <div class="feature-box">
+                <h3>Why Choose This product?</h3>
+                <ul>
+                    <li>only used 5 month</li>
+                    <li>best quality</li>
+                    <li>for best price</li>
+                    <li>Customer Support</li>
+                </ul>
+            </div>
+
+            <div class="map-box">
+                <h3>Property Location</h3>
+                <p>Location address here</p>
+                <div class="location-map"></div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-box">
+            <div class="sidebar-card">
+                <h3>Contact Seller</h3>
+
+                <div class="input-group">
+                    <input type="text" placeholder="Name">
+                </div>
+
+                <div class="input-group">
+                    <input type="text" placeholder="Phone">
+                </div>
+
+                <div class="input-group">
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <button class="button">Get Contact Details</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

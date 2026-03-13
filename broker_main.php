@@ -1,0 +1,452 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BROKER.com</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="broker_main.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-left">BROKER.com</div>
+        <div class="nav-right">
+            <a href="#">Pay Rent</a>
+            <a href="#"><i class="fa fa-heart-o"></i> Saved</a>
+            <a href="#">Packages ▾</a>
+            <a href="#" class="post-property">Post Property FREE</a>
+            <div class="menu-icon" id="mainMenuIcon">☰</div>
+        </div>
+    </nav>
+
+    <!-- SEARCH -->
+
+    <section class="search-wrap">
+        <div class="search-container">
+            <div class="categories">
+                <button class="cat-btn">Buy</button>
+                <button class="cat-btn">Rent</button>
+                <button class="cat-btn">Commercial</button>
+                <button class="cat-btn">PG</button>
+                <button class="cat-btn">Plot</button>
+                <button class="cat-btn">Home Equipment</button>
+            </div>
+            <form class="search-box" id="searchForm">
+                <select id="city" name="city" required>
+                    <option value disabled selected>Select City</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="pune">Pune</option>
+                    <option value="hyderabad">Hyderabad</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="card-section">
+        <div class="card-container">
+            <div class="card"><img src="images\pay on credit.jpeg" alt="">
+                <div class="title">Pay on Credit</div>
+                <div class="description">Pay rent using Credit Card</div>
+            </div>
+            <div class="card"><img src="images\housing premium.jpg" alt="">
+                <div class="title">Housing Premium</div>
+                <div class="description">Zero brokerage properties</div>
+            </div>
+            <div class="card"><img src="images\home loans.jpeg" alt="">
+                <div class="title">Home Loans</div>
+                <div class="description">Lowest interest rate offers</div>
+            </div>
+            <div class="card"><img src="images\housingprotect.jpeg" alt="">
+                <div class="title">Housing Protect</div>
+                <div class="description">Protection against frauds</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+        <h2>Prominent projects to explore</h2>
+        <div class="carousel-wrap new">
+            <button class="nav-btn left" onclick="scrollCarousel(this, -1)">◀</button>
+            <div class="carousel new" data-carousel>
+                <div class="card" onclick="window.open('brokernextpage.html', '_blank')"><img src="images\building1.jpeg" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Ivory Heights</div>
+                        <div class="card-sub">Bangalore</div>
+                        <div class="card-price">₹36.92 L - 46.65 L</div> 
+                    </div>
+                </div>
+                <div class="card" onclick="window.open('brokernextpage.html', '_blank')"><img src="images\building2.jpeg" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Exurbia Heights</div>
+                        <div class="card-sub">Hyderabad</div>
+                        <div class="card-price">₹26.91 L - 36.64 L</div>
+                    </div>
+                </div>
+                <div class="card" onclick="window.open('brokernextpage.html', '_blank')"><img src="images\building3.jpg" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Maple Residency</div>
+                        <div class="card-sub">Pune</div>
+                        <div class="card-price">₹40 L - 60 L</div>
+                    </div>
+                </div>
+                <div class="card" onclick="window.open('brokernextpage.html', '_blank')"><img src="images\building3.jpg" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Maple Residency</div>
+                        <div class="card-sub">Pune</div>
+                        <div class="card-price">₹40 L - 60 L</div>
+                    </div>
+                </div><div class="card" onclick="window.open('brokernextpage.html', '_blank')"><img src="images\building3.jpg" alt="">
+                    <div class="card-body">
+                        <div class="card-title">Maple Residency</div>
+                        <div class="card-sub">Pune</div>
+                        <div class="card-price">₹40 L - 60 L</div>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-btn right" onclick="scrollCarousel(this, 1)">▶</button>
+        </div>
+    </section>
+
+    <!-- DEVELOPERS -->
+    <section class="section">
+        <h2>Featured Developers</h2>
+        <div class="carousel-wrap new">
+            <button class="nav-btn left" onclick="scrollCarousel(this, -1)">◀</button>
+            <div class="carousel new" data-carousel>
+                <div class="dev-card">
+                    <div class="dev-title">Chaitanya Developers</div>
+                    <div class="dev-sub">12 projects</div><img src="images\feature1.avif" class="dev-img" alt="">
+                </div>
+                <div class="dev-card">
+                    <div class="dev-title">DAC Developers</div>
+                    <div class="dev-sub">20 projects</div><img src="images\feature2.jpeg" class="dev-img" alt="">
+                </div>
+                <div class="dev-card">
+                    <div class="dev-title">Sobha Realty</div>
+                    <div class="dev-sub">15 projects</div><img src="images\feature3.jpeg" class="dev-img" alt="">
+                </div>
+                <div class="dev-card">
+                    <div class="dev-title">Sobha Realty</div>
+                    <div class="dev-sub">15 projects</div><img src="images\feature3.jpeg" class="dev-img" alt="">
+                </div>
+                <div class="dev-card">
+                    <div class="dev-title">Sobha Realty</div>
+                    <div class="dev-sub">15 projects</div><img src="images\feature3.jpeg" class="dev-img" alt="">
+                </div>
+            </div>
+            <button class="nav-btn right" onclick="scrollCarousel(this, 1)">▶</button>
+        </div>
+    </section>
+    <section class="section">
+        <!--house equipment-->
+
+
+
+
+        <h2>House Equipment</h2>
+        <div class="carousel-wrap new">
+            <button class="nav-btn left" onclick="scrollCarousel(this, -1)">◀</button>
+            <div class="carousel new" data-carousel>
+                <div class="card" onclick="window.open('brokernextpage.html', '_blank')"><img src="images\ac1.jpg"
+                        alt="">
+                    <div class="card-body">
+                        <div class="card-title">AC</div>
+                        <div class="card-sub"></div>
+                        <div class="card-price">₹5000</div>
+                    </div>
+                </div>
+                <div class="card" onclick="window.open('brokernextpage.html', '_blank')"><img src="images\fridge front.webp"
+                        alt="">
+                    <div class="card-body">
+                        <div class="card-title">fridge</div>
+                        <div class="card-sub"></div>
+                        <div class="card-price">₹6000</div>
+                    </div>
+                </div>
+                <div class="card" onclick="window.open('brokernextpage.html', '_blank')"><img
+                        src="images\washing machine1.jpeg" alt="">
+                    <div class="card-body">
+                        <div class="card-title">washing machine</div>
+                        <div class="card-sub"></div>
+                        <div class="card-price">₹7000</div>
+                    </div>
+                </div>
+                <div class="card" onclick="window.open('brokernextpage.html', '_blank')"><img
+                        src="images\washing machine1.jpeg" alt="">
+                    <div class="card-body">
+                        <div class="card-title">washing machine</div>
+                        <div class="card-sub"></div>
+                        <div class="card-price">₹7000</div>
+                    </div>
+                </div><div class="card" onclick="window.open('brokernextpage.html', '_blank')"><img
+                        src="images\washing machine1.jpeg" alt="">
+                    <div class="card-body">
+                        <div class="card-title">washing machine</div>
+                        <div class="card-sub"></div>
+                        <div class="card-price">₹7000</div>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-btn right" onclick="scrollCarousel(this, 1)">▶</button>
+        </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section class="section">
+        <h2>Research and Insights</h2>
+        <div class="carousel-wrap new">
+            <button class="nav-btn left" onclick="scrollCarousel(this, -1)">◀</button>
+            <div class="carousel new" data-carousel>
+                <div class="insight-card"><img src="images\price trend.jpg" alt="">
+                    <div>Price Trends</div>
+                </div>
+                <div class="insight-card"><img src="images\city insight.jpg" alt="">
+                    <div>City Insights</div>
+                </div>
+                <div class="insight-card"><img src="images\housing research.jpg" alt="">
+                    <div>Buyer Demand</div>
+                </div>
+            </div>
+            <button class="nav-btn right" onclick="scrollCarousel(this, 1)">▶</button>
+        </div>
+    </section>
+
+    <!-- SELLERS -->
+    <section class="section">
+        <h2>Recommended sellers</h2>
+        <div class="carousel-wrap new">
+            <button class="nav-btn left" onclick="scrollCarousel(this, -1)">◀</button>
+            <div class="carousel new" data-carousel>
+                <div class="seller-card">🏢<span>Shristi Realtors</span></div>
+                <div class="seller-card">🏠<span>Urban Realty</span></div>
+                <div class="seller-card">🏘️<span>Green Homes</span></div>
+            </div>
+            <button class="nav-btn right" onclick="scrollCarousel(this, 1)">▶</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-ultra">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Safety</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Home Loans</a></li>
+                    <li><a href="#">Legal Help</a></li>
+                    <li><a href="#">Property Valuation</a></li>
+                    <li><a href="#">Property Management</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 BROKER.com
+        </div>
+    </footer>
+
+    <!-- ---------------- NEW POPUP MODAL (OPTION A1) ---------------- -->
+    <div id="dashboardModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="dashboardTitle">
+        <div class="modal-content" role="document" aria-modal="true">
+            <div class="modal-close">
+                <button id="closeModal">✕</button>
+            </div>
+
+           <div class="header">
+<!-- 
+<h3>Hello 
+<?php 
+if(isset($_SESSION['user_name'])){
+echo $_SESSION['user_name'];
+}else{
+echo "Guest";
+}
+?> 👋</h3> -->
+
+
+<?php if(isset($_SESSION['user_name'])){ 
+
+$name = $_SESSION['user_name'];
+$first_letter = strtoupper($name[0]);
+
+?>
+
+<div class="profile-card">
+
+<div class="avatar">
+<?php echo $first_letter; ?>
+</div>
+
+<h2><?php echo $_SESSION['user_name']; ?></h2>
+
+<p><?php echo $_SESSION['user_email']; ?></p>
+
+<a href="profile.php">
+<button class="profile-btn">View Profile</button>
+</a>
+</div>
+
+<?php } else { ?>
+
+<p style="margin:6px 0 0 0; color:blue;">
+✅ Easy contact with sellers<br>
+✅ Personalized experience
+</p>
+
+<form action="login_register.php" method="POST">
+<div class="login">
+<input class="login-btn" type="submit" value="Login" name="u_login">
+</div>
+</form>
+
+<?php } ?>
+
+</div>
+        <div class="menu" style="margin-top:40px;">
+            <div class="menu-item">💎 <span style="margin-left:8px;">Zero Brokerage Properties</span></div>
+            <div class="menu-item">📑 <span style="margin-left:8px;">My Transactions</span></div>
+            <div class="menu-item">⭐ <span style="margin-left:8px;">My Reviews</span><span class="badge"
+                    style="float:right;margin-top:4px;">NEW</span></div>
+            <div class="menu-item">🔗 <span style="margin-left:8px;">Quick Links</span></div>
+
+            <div class="menu-item">🏘️ <span style="margin-left:8px;">Residential Packages</span></div>
+            <div class="menu-item">🏠 <span style="margin-left:8px;">Housing Edge</span></div>
+            <div class="menu-item">🛠️ <span style="margin-left:8px;">Services</span></div>
+
+            <div class="menu-item">🔔 <span style="margin-left:8px;">Unsubscribe Alerts</span></div>
+            <div class="menu-item">💡 <span style="margin-left:8px;">Housing Advice</span></div>
+            <div class="menu-item">⚠️ <span style="margin-left:8px;">Report a Fraud</span></div>
+            <a href="logout.php" style="text-decoration:none;color:black;">
+                <div class="menu-item">🚪 Log out</div>
+            </a>
+        </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+
+    <!-- ---------------- SCRIPTS ---------------- -->
+    <script>
+        // Open/Close modal (Option A1)
+        (function () {
+            const menuIcon = document.getElementById('mainMenuIcon');
+            const modal = document.getElementById('dashboardModal');
+            const closeBtn = document.getElementById('closeModal');
+            const modalContent = modal ? modal.querySelector('.modal-content') : null;
+
+            function openModal() {
+                if (!modal) return;
+                modal.classList.add('show');
+                modal.setAttribute('aria-hidden', 'false');
+                // prevent background scroll while modal open
+                document.body.style.overflow = 'hidden';
+                // focus for accessibility
+                setTimeout(() => {
+                    const focusable = modal.querySelector('.login-btn') || closeBtn;
+                    if (focusable) focusable.focus();
+                }, 120);
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                modal.classList.remove('show');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            if (menuIcon) menuIcon.addEventListener('click', openModal);
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+            // Do NOT close modal when clicking inside modal content
+            if (modalContent) {
+                modalContent.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            }
+
+            // Clicking the backdrop will NOT close the modal (user requested close only by X)
+            // If you want backdrop click to close, uncomment below:
+            // modal.addEventListener('click', closeModal);
+
+            // ESC key closes modal
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal && modal.classList.contains('show')) {
+                    closeModal();
+                }
+            });
+
+            // Ensure menu items do NOT close the modal (they keep it open)
+            document.querySelectorAll('.menu-item').forEach(it => {
+                it.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    // optionally: handle navigation here, but do NOT close modal
+                    // console.log('Clicked menu item:', this.textContent.trim());
+                });
+            });
+        })();
+
+        /* ---------- Carousel scroll helper (used by onclicks in markup) ---------- */
+        function scrollCarousel(button, direction) {
+            const wrap = button.closest('.carousel-wrap');
+            if (!wrap) return;
+            const carousel = wrap.querySelector('.carousel');
+            if (!carousel) return;
+            const card = carousel.querySelector('.card, .dev-card, .insight-card, .seller-card');
+            let gap = 16;
+            const style = window.getComputedStyle(carousel);
+            if (style && style.gap) {
+                const parsed = parseInt(style.gap);
+                if (!isNaN(parsed)) gap = parsed;
+            }
+            const cardW = card ? card.getBoundingClientRect().width + gap : carousel.clientWidth * 0.9;
+            carousel.scrollBy({ left: cardW * direction, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
